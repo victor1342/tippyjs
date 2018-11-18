@@ -441,10 +441,11 @@ export const closestCallback = (element, callback) => {
  * Focuses an element while preventing a scroll jump if it's not within the viewport
  */
 export const focus = el => {
-  const x = window.scrollX || window.pageXOffset
-  const y = window.scrollY || window.pageYOffset
-  el.focus()
-  scroll(x, y)
+// Causes problems when interactive set to true
+//   const x = window.scrollX || window.pageXOffset
+//   const y = window.scrollY || window.pageYOffset
+//   el.focus()
+//   scroll(x, y)
 }
 
 /**
